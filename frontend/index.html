@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DestinID</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Open+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pannellum CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"
+    />
+    <!-- Pannellum JS -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDucZ4rnn48TwdZJ3GlGUiOiwUkCgLhgdg&callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "forest-green": "#1D3C34",
+              "leaf-green": "#2E5D4B",
+              "sunset-orange": "#FF7A45",
+              "sand-yellow": "#F5DEB3",
+            },
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+              opensans: ["Open Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #1d3c34;
+        bottom: -4px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+
+      .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .nav-link:not(:hover)::after {
+        transform-origin: right;
+        transition: transform 0.4s ease;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .btn-animation {
+        transition: all 0.3s ease;
+      }
+
+      .btn-animation:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #1d3c34;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2e5d4b;
+      }
+
+      /* Enhanced Mobile Menu Animation with Overlay */
+      .mobile-menu-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        opacity: 0;
+        background-color: #f9f9f9;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+        /* Removed margin: 0 10px to make it full width */
+      }
+
+      .mobile-menu-content.open {
+        max-height: 300px;
+        opacity: 1;
+        padding: 12px 8px;
+      }
+
+      /* Improved mobile menu items animation with forest green hover */
+      .menu-item {
+        display: block;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border-radius: 12px;
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        color: #1d3c34;
+        background-color: rgba(29, 60, 52, 0.05);
+        transform: translateY(20px) scale(0.9);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mobile-menu-content.open .menu-item {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      .mobile-menu-content.open .menu-item:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+
+      .mobile-menu-content.open .menu-item:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+
+      .mobile-menu-content.open .menu-item:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+
+      .mobile-menu-content.open .menu-item:nth-child(4) {
+        transition-delay: 0.4s;
+      }
+
+      /* New hover effect: text white, background forest-green */
+      .menu-item:hover {
+        background-color: #1d3c34;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .menu-item span {
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease;
+      }
+
+      .menu-item:active {
+        transform: scale(0.97);
+      }
+
+      /* Ripple effect with forest green color */
+      .ripple {
+        position: absolute;
+        background-color: rgba(29, 60, 52, 0.7);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        animation: ripple 0.6s linear;
+      }
+
+      @keyframes ripple {
+        to {
+          transform: translate(-50%, -50%) scale(15);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-sand-yellow bg-opacity-20 text-gray-800">
+    <!-- header -->
+    <header class="sticky top-0 z-50">
+      <nav class="py-2 px-4 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center font-manrope">
+              <div class="text-2xl font-bold flex items-center">
+                <span class="text-forest-green">DESTIN</span>
+                <span class="text-sunset-orange">ID</span>
+                <span class="text-xs text-gray-500 ml-2 hidden md:inline"
+                  >Destinasi Indonesia</span
+                >
+              </div>
+            </div>
+
+            <!-- Right Side Navigation -->
+            <div class="hidden md:flex items-center space-x-8 font-manrope">
+              <div class="flex items-center space-x-8">
+                <a
+                  href="/"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  >Beranda</a
+                >
+                <a
+                  href="#destinations"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  >Destinasi</a
+                >
+                <a
+                  href="#culture"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  >Tentang</a
+                >
+                <a
+                  href="#about"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  >Kontak</a
+                >
+              </div>
+            </div>
+
+            <!-- Mobile Navigation Button with Phosphor Icon -->
+            <div class="md:hidden">
+              <button
+                id="mobile-menu-button"
+                class="focus:outline-none p-2"
+                aria-label="Toggle menu"
+              >
+                <i
+                  id="menu-icon"
+                  class="ph ph-list text-2xl text-forest-green"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu - Full width container -->
+      <div
+        id="mobile-menu-content"
+        class="md:hidden mobile-menu-content w-full"
+      >
+        <div class="px-4 pt-1 pb-2 space-y-3">
+          <a href="#home" class="menu-item">
+            <span>Beranda</span>
+          </a>
+          <a href="#destinations" class="menu-item">
+            <span>Destinasi</span>
+          </a>
+          <a href="#culture" class="menu-item">
+            <span>Tentang</span>
+          </a>
+          <a href="#about" class="menu-item">
+            <span>Kontak</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main class="flex-grow min-w-sm"></main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <!-- Footer Section -->
+    <footer class="bg-forest-green text-white py-12">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- About Column -->
+          <div>
+            <div class="flex items-center mb-4">
+              <h3 class="text-xl font-manrope font-bold">
+                <span class="text-white">DESTIN</span>
+                <span class="text-sunset-orange">ID</span>
+              </h3>
+            </div>
+            <p class="text-gray-300 text-sm mb-6 font-opensans">
+              Jelajahi surga tersembunyi Indonesia melalui pengalaman virtual
+              yang mendalam, temukan keindahan, budaya, dan keajaiban dari
+              kepulauan Indonesia yang megah.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="text-white hover:text-sunset-orange transition duration-300"
+              >
+                <i class="ph ph-facebook-logo text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-sunset-orange transition duration-300"
+              >
+                <i class="ph ph-instagram-logo text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white hover:text-sunset-orange transition duration-300"
+              >
+                <i class="ph ph-twitter-logo text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div>
+            <h3 class="text-lg font-manrope font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-300 font-opensans">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Destinasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Kontak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Tentang</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Top Destinations Column -->
+          <div>
+            <h3 class="text-lg font-manrope font-semibold mb-4">
+              Top Destinations
+            </h3>
+            <ul class="space-y-2 text-gray-300 font-opensans">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Bali, Kuta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Bali, Kuta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Bali, Kuta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Bali, Kuta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-sunset-orange transition duration-300"
+                  >Bali, Kuta</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-manrope font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-4 text-gray-300 font-opensans">
+              <li class="flex items-start">
+                <i class="ph ph-map-pin text-sunset-orange mt-1 mr-2"></i>
+                <a
+                  href="https://www.google.com/maps?q=Jln+Mangga1,+Mataram,+Subakti,+Indo"
+                  target="_blank"
+                  class="transition duration-300 ease-in-out hover:text-sunset-orange"
+                >
+                  Jln Mangga1, Mataram, Subakti, Indo
+                </a>
+              </li>
+              <li class="flex items-center">
+                <i class="ph ph-phone text-sunset-orange mr-2"></i>
+                <a
+                  href="https://wa.me/622121234678"
+                  target="_blank"
+                  class="transition duration-300 ease-in-out hover:text-sunset-orange"
+                >
+                  +62 212 1234 678
+                </a>
+              </li>
+              <li class="flex items-center">
+                <i class="ph ph-envelope text-sunset-orange mr-2"></i>
+                <a
+                  href="mailto:info@destind.com"
+                  target="_blank"
+                  class="transition duration-300 ease-in-out hover:text-sunset-orange"
+                >
+                  info@destind.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="border-t border-gray-700 mt-12 pt-6 text-center">
+          <p class="text-sm text-gray-400">© Copyright DestinID 2025</p>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script type="module" src="src/main.js"></script>
+
+    <script>
+      function initMap() {
+        console.log("Google Maps API loaded successfully.");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenuContent = document.getElementById(
+          "mobile-menu-content"
+        );
+        const menuIcon = document.getElementById("menu-icon");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenuContent.classList.toggle("open");
+
+          // Toggle between list and x icons
+          if (menuIcon.classList.contains("ph-list")) {
+            menuIcon.classList.remove("ph-list");
+            menuIcon.classList.add("ph-x");
+          } else {
+            menuIcon.classList.remove("ph-x");
+            menuIcon.classList.add("ph-list");
+          }
+        });
+
+        // Close the menu when clicking on links
+        const menuLinks = document.querySelectorAll("#mobile-menu-content a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenuContent.classList.remove("open");
+            menuIcon.classList.remove("ph-x");
+            menuIcon.classList.add("ph-list");
+          });
+        });
+
+        // Add ripple effect to menu items
+        const menuItems = document.querySelectorAll(".menu-item");
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            ripple.style.width = "20px";
+            ripple.style.height = "20px";
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+
+            item.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !mobileMenuButton.contains(e.target) &&
+            !mobileMenuContent.contains(e.target) &&
+            mobileMenuContent.classList.contains("open")
+          ) {
+            mobileMenuContent.classList.remove("open");
+            menuIcon.classList.remove("ph-x");
+            menuIcon.classList.add("ph-list");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
