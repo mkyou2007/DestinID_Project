@@ -17,13 +17,8 @@
       "lng": 95.93769157
     },
     "umkm": [
-      {
-        "id" : 1,
-        "name": "Warung Kopi Labui",
-        "description": "Warung Kopi Labui adalah tempat yang menyajikan kopi khas Aceh dan makanan ringan lokal. Tempat ini menjadi pilihan bagi wisatawan yang ingin menikmati suasana sekitar masjid sambil mencicipi kuliner lokal.",
-        "image": "https://assets.kompasiana.com/items/album/2021/04/30/rappler-608c18bfd541df686e1cbf95.jpeg"
-      }
-
+      { "name": "tas amikan", "desc": "dibuat dengan tulus oleh ibu.", "image": "https://www.blibli.com/friends-backend/wp-content/uploads/2021/11/Oleh-Oleh-Khas-Indonesia.jpg" },
+      { "name": "kopi luwak", "desc": "kopi khas.", "image": "https://ik.imagekit.io/tvlk/blog/2023/02/souvenirs_shutterstock_777729133-Copy.jpg" }
     ],
     "Description": "Aek Natonang adalah danau di atas Pulau Samosir yang terletak di Danau Toba, sehingga dijuluki danau di atas danau. Dari kawasan wisata Tuktuk Siadong, waktu tempuhnya sekitar 40 menit melalui jalan lingkar Samosir.",
     "History": "Masjid Po Teumeureuhom atau Masjid Labui adalah sebuah masjid yang terletak di Kabupaten Pidie, Aceh. Masjid Kuno Labui didirikan pada masa pemerintahan Sultan Iskandar Muda. Masjid ini pernah direnovasi pada tahun 1916 tanpa mengubah denah asli oleh Uleebalang Pidie, yaitu Tengku Raja Kuala Usman.",
@@ -48,8 +43,9 @@
       "lat": 2.563718424,
       "lng": 98.88351317
     },
-    "umkm": "Camping Ground Aek Natonang",
+    
     "Description": "Aek Natonang adalah danau di atas Pulau Samosir yang terletak di Danau Toba, sehingga dijuluki danau di atas danau. Dari kawasan wisata Tuktuk Siadong, waktu tempuhnya sekitar 40 menit melalui jalan lingkar Samosir.",
+    "umkm": "Jasa Pemandu Gunung Tujuh",
     "History": "Danau Aek Natonang adalah danau yang terletak di Pulau Samosir, Sumatera Utara. Danau ini memiliki luas sekitar 1.000 hektar dan dikelilingi oleh perbukitan hijau yang indah. Danau ini juga dikenal sebagai tempat wisata yang menawarkan pemandangan alam yang menakjubkan.",
     "historyImage": [
       "https://assets.kompasiana.com/items/album/2021/04/30/rappler-608c18bfd541df686e1cbf95.jpeg"

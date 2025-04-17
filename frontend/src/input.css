@@ -1,1 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force Tailwind to include these classes */
+/* Use these classes: flex, flex-col, min-h-screen, bg-sand-yellow, text-gray-800 */
+/* More classes: container, mx-auto, px-4, sm:px-6, lg:px-8, hidden, md:flex */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panorama View</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDucZ4rnn48TwdZJ3GlGUiOiwUkCgLhgdg&callback=initPanorama"
+      async
+      defer
+    ></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      #panorama {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panorama"></div>
+    <script>
+      function initPanorama() {
+        // Ambil parameter latitude dan longitude dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = parseFloat(urlParams.get("lat"));
+        const lng = parseFloat(urlParams.get("lng"));
+
+        if (!lat || !lng) {
+          alert("Coordinates not found!");
+          return;
+        }
+
+        // Inisialisasi Google Street View
+        const panorama = new google.maps.StreetViewPanorama(
+          document.getElementById("panorama"),
+          {
+            position: { lat, lng },
+            pov: { heading: 165, pitch: 0 },
+            zoom: 1,
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
