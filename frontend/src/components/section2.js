@@ -149,7 +149,7 @@ const cardItem = (data) => {
 
   const card = createEl(
     "div",
-    "relative rounded-xl overflow-hidden shadow hover:shadow-xl transition-all text-white min-h-[360px] flex flex-col justify-end"
+    "relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white min-h-[360px] flex flex-col justify-end group"
   );
 
   // Gunakan gambar pertama dari array `images`, atau gambar default jika kosong
@@ -161,7 +161,7 @@ const cardItem = (data) => {
   // overlay gelap biar teks kebaca
   const overlay = createEl(
     "div",
-    "bg-gradient-to-t from-black/60 via-black/30 to-transparent h-full w-full p-5 flex flex-col justify-end"
+    "bg-gradient-to-t from-black/80 via-black/50 to-transparent h-full w-full p-5 flex flex-col justify-end transition-all duration-300 group-hover:from-black/90 group-hover:via-black/70"
   );
 
   // kategori destinasi (misal: pantai, gunung, dll)
@@ -188,7 +188,7 @@ const cardItem = (data) => {
   // =============== tombol buat ke detail destinasi ===============
   const btn = createEl(
     "button",
-    "bg-blue-600/90 hover:bg-blue-700/90 text-white text-sm px-3 py-1.5 rounded w-fit hover:cursor-pointer",
+    "bg-blue-600/90 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-lg w-fit hover:cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg",
     "Explore Destination"
   );
 

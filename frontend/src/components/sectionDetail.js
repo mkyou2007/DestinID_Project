@@ -41,39 +41,38 @@ const sectionPeninggalan = (data) => {
     "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
   );
 
-  // Daftar peninggalan yang akan ditampilkan (data bisa kosong, maka menggunakan default dummy data)
-  const peninggalanList = data.peninggalan || [
-    // Tambah data dummy lainnya
-    { name: "tas amikan", desc: "dibuat dengan tulus oleh ibu.", image: "https://www.blibli.com/friends-backend/wp-content/uploads/2021/11/Oleh-Oleh-Khas-Indonesia.jpg" },
-    { name: "talenan kayu", desc: "khas dari suku dayak.", image: "https://ik.imagekit.io/tvlk/blog/2023/02/souvenirs_shutterstock_777729133-Copy.jpg" },
-    { name: "kopi luwak", desc: "Candi utama.", image: "https://bobobox.com/blog/wp-content//uploads/2023/11/Kopi-Luwak.webp" },
-    { name: "Candi Utama", desc: "Candi utama.", image: "https://eventkampus.com/data/artikel/0/952/foto-10-oleh-oleh-khas-indonesia-yang-paling-diminati-wisatawan-mancanegara.jpg" },
-  ];
+  // Daftar peninggalan yang akan ditampilkan - gunakan dummy data jika tidak ada data asli
+  const peninggalanList = Array.isArray(data.peninggalan) && data.peninggalan.length > 0 
+    ? data.peninggalan 
+    : [
+        { name: "Artefak Sejarah", desc: "Peninggalan bersejarah dari masa lalu destinasi ini.", image: "https://www.blibli.com/friends-backend/wp-content/uploads/2021/11/Oleh-Oleh-Khas-Indonesia.jpg" },
+        { name: "Prasasti Kuno", desc: "Tulisan kuno yang menggambarkan sejarah tempat ini.", image: "https://ik.imagekit.io/tvlk/blog/2023/02/souvenirs_shutterstock_777729133-Copy.jpg" },
+        { name: "Monumen Bersejarah", desc: "Simbol penting dari peristiwa bersejarah di lokasi ini.", image: "https://bobobox.com/blog/wp-content//uploads/2023/11/Kopi-Luwak.webp" },
+        { name: "Struktur Bangunan", desc: "Bentuk arsitektur khas yang mencerminkan budaya lokal.", image: "https://eventkampus.com/data/artikel/0/952/foto-10-oleh-oleh-khas-indonesia-yang-paling-diminati-wisatawan-mancanegara.jpg" },
+      ];
 
   // Loop untuk menampilkan setiap item peninggalan
   peninggalanList.forEach((item) => {
     const card = createEl(
       "div",
-      "relative rounded-xl overflow-hidden shadow hover:shadow-xl transition-all text-white min-h-[300px] flex flex-col justify-end"
-    );
-    if (item.image) {
-      card.style.backgroundImage = `url('${item.image}')`; // Menambahkan gambar background jika ada
-    } else {
-      card.classList.add("bg-gradient-to-tr", "from-slate-600", "to-slate-400"); // Menambahkan background gradient jika tidak ada gambar
-    }
-
-    // Overlay untuk memberi efek di atas gambar
-    const overlay = createEl(
-      "div",
-      "bg-gradient-to-t from-black/60 via-black/30 to-transparent h-full w-full p-5 flex flex-col justify-end"
+      "bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-[300px]"
     );
 
-    // Judul dan deskripsi peninggalan
-    const h3 = createEl("h3", "text-lg md:text-xl font-bold mb-1", item.name);
-    const desc = createEl("p", "text-sm", item.desc);
-    overlay.append(h3, desc); // Menambahkan judul dan deskripsi ke overlay
-    card.append(overlay); // Menambahkan overlay ke dalam card
-    grid.append(card); // Menambahkan card ke dalam grid
+    // Bagian gambar
+    const imgContainer = createEl("div", "h-[180px] overflow-hidden");
+    const img = createEl("img", "w-full h-full object-cover transition-transform duration-500 hover:scale-110");
+    img.src = item.image || "https://via.placeholder.com/300x180?text=No+Image";
+    img.alt = item.name;
+    imgContainer.appendChild(img);
+
+    // Bagian konten
+    const content = createEl("div", "p-4 flex flex-col flex-grow");
+    const name = createEl("h3", "text-lg font-bold text-primary mb-1 line-clamp-1", item.name);
+    const desc = createEl("p", "text-sm text-gray-600 line-clamp-3", item.desc);
+
+    content.append(name, desc);
+    card.append(imgContainer, content);
+    grid.appendChild(card);
   });
 
   wrap.append(title, grid); // Menambahkan judul dan grid ke dalam wrapper
@@ -83,12 +82,6 @@ const sectionPeninggalan = (data) => {
 // ===== Section UMKM =====
 // Fungsi untuk membuat bagian yang menampilkan UMKM di sekitar destinasi
 const sectionUmkm = (data) => {
-  const umkmList = data.umkm || []; // Gunakan array kosong jika `umkm` tidak ada
-  if (!Array.isArray(umkmList)) {
-    console.error("UMKM data is not an array:", umkmList);
-    return document.createElement("div"); // Kembalikan elemen kosong jika data tidak valid
-  }
-
   const section = createEl("div", "mt-12");
   const title = createEl(
     "h2",
@@ -100,28 +93,73 @@ const sectionUmkm = (data) => {
     "div",
     "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
   );
+
+  // Validate and process UMKM data
+  let umkmList = [];
+  if (Array.isArray(data.umkm) && data.umkm.length > 0) {
+    umkmList = data.umkm;
+  } else {
+    // Dummy data when no UMKM data available
+    umkmList = [
+      { 
+        name: "Warung Kuliner Lokal", 
+        desc: "Menyajikan berbagai masakan khas daerah dengan cita rasa otentik.", 
+        image: "https://www.blibli.com/friends-backend/wp-content/uploads/2021/11/Oleh-Oleh-Khas-Indonesia.jpg" 
+      },
+      { 
+        name: "Toko Souvenir", 
+        desc: "Menjual berbagai oleh-oleh dan kerajinan tangan khas daerah setempat.", 
+        image: "https://ik.imagekit.io/tvlk/blog/2023/02/souvenirs_shutterstock_777729133-Copy.jpg" 
+      },
+      { 
+        name: "Kafe Tematik", 
+        desc: "Tempat santai menikmati kopi dan makanan dengan tema budaya lokal.", 
+        image: "https://bobobox.com/blog/wp-content//uploads/2023/11/Kopi-Luwak.webp" 
+      }
+    ];
+  }
+
   umkmList.forEach((umkm) => {
     const card = createEl(
       "div",
-      "bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+      "bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-1 transition-all duration-300"
     );
 
-    const image = createEl("img", "w-full h-40 object-cover");
-    image.src = umkm.image || "https://via.placeholder.com/150"; // Default image if none provided
+    // Image container with hover effect
+    const imageContainer = createEl("div", "h-48 overflow-hidden relative");
+    const image = createEl("img", "w-full h-full object-cover transition-transform duration-500 hover:scale-110");
+    image.src = umkm.image || "https://via.placeholder.com/400x300?text=UMKM";
     image.alt = umkm.name;
+    imageContainer.appendChild(image);
 
+    // Content container
     const cardContent = createEl("div", "p-5");
-    const title = createEl(
+    
+    // Title with line clamp for consistency
+    const cardTitle = createEl(
       "h3",
-      "text-lg font-semibold text-primary mb-2",
+      "text-lg font-bold text-primary mb-2 line-clamp-1",
       umkm.name
     );
-    const description = createEl("p", "text-sm text-gray-600", umkm.desc);
+    
+    // Description with line clamp to keep cards consistent height
+    const description = createEl(
+      "p", 
+      "text-sm text-gray-600 line-clamp-3", 
+      umkm.desc
+    );
 
-    card.appendChild(image); // Add the image to the card
+    // Button/link element
+    const linkContainer = createEl("div", "mt-4");
+    const link = createEl(
+      "button",
+      "px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/80 transition-colors",
+      "Kunjungi"
+    );
+    linkContainer.appendChild(link);
 
-    cardContent.append(title, description);
-    card.append(cardContent);
+    cardContent.append(cardTitle, description, linkContainer);
+    card.append(imageContainer, cardContent);
     container.appendChild(card);
   });
 

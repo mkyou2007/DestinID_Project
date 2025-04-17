@@ -17,14 +17,14 @@
       "lng": 95.93769157
     },
     "umkm": [
-      { "name": "tas amikan", "desc": "dibuat dengan tulus oleh ibu.", "image": "https://www.blibli.com/friends-backend/wp-content/uploads/2021/11/Oleh-Oleh-Khas-Indonesia.jpg" },
-      { "name": "kopi luwak", "desc": "kopi khas.", "image": "https://ik.imagekit.io/tvlk/blog/2023/02/souvenirs_shutterstock_777729133-Copy.jpg" }
+      
     ],
     "Description": "Aek Natonang adalah danau di atas Pulau Samosir yang terletak di Danau Toba, sehingga dijuluki danau di atas danau. Dari kawasan wisata Tuktuk Siadong, waktu tempuhnya sekitar 40 menit melalui jalan lingkar Samosir.",
     "History": "Masjid Po Teumeureuhom atau Masjid Labui adalah sebuah masjid yang terletak di Kabupaten Pidie, Aceh. Masjid Kuno Labui didirikan pada masa pemerintahan Sultan Iskandar Muda. Masjid ini pernah direnovasi pada tahun 1916 tanpa mengubah denah asli oleh Uleebalang Pidie, yaitu Tengku Raja Kuala Usman.",
     "historyImage": [
       "https://assets.kompasiana.com/items/album/2021/04/30/rappler-608c18bfd541df686e1cbf95.jpeg"
-    ]
+    ],
+    "peninggalan": []
   },
   {
     "ID": 2,
@@ -43,17 +43,13 @@
       "lat": 2.563718424,
       "lng": 98.88351317
     },
-    
     "Description": "Aek Natonang adalah danau di atas Pulau Samosir yang terletak di Danau Toba, sehingga dijuluki danau di atas danau. Dari kawasan wisata Tuktuk Siadong, waktu tempuhnya sekitar 40 menit melalui jalan lingkar Samosir.",
-    "umkm": "Jasa Pemandu Gunung Tujuh",
+    "umkm": "",
     "History": "Danau Aek Natonang adalah danau yang terletak di Pulau Samosir, Sumatera Utara. Danau ini memiliki luas sekitar 1.000 hektar dan dikelilingi oleh perbukitan hijau yang indah. Danau ini juga dikenal sebagai tempat wisata yang menawarkan pemandangan alam yang menakjubkan.",
     "historyImage": [
       "https://assets.kompasiana.com/items/album/2021/04/30/rappler-608c18bfd541df686e1cbf95.jpeg"
     ],
-    "culturalImage": [
-      "https://asset-2.tstatic.net/tribunnews/foto/bank/images/danau-aek-natonang-1.jpg"
-    ],
-    "culturalHaritages": []
+    "peninggalan": []
   },
   {
     "ID": 3,
@@ -72,7 +68,7 @@
       "lat": -0.279544212,
       "lng": 100.2920607
     },
-    "umkm": "Kolam Mandi Pincuran Gadang",
+    "umkm": "",
     "Description": "Masjid Pincuran Gadang adalah masjid yang berada di sebuah lembah bernama Pincuran Gadang di Kecamatan Matua, Kabupaten Agam, Sumatera Barat.Masjid ini ditetapkan sebagai  situs cagar budaya.",
     "History": "Masjid Tuo Pincuran Gadang adalah Mesjid yang didirikan oleh Tuanku Alam Putiah (lareh pertama Matur) pada tahun 1885. Disini terdapat peninggalan berupa 20 lubang pertahanan atau yang disebut masyarakat setempat dengan \"Lubang Duo Puluah\".",
     "cultural-Image": [
@@ -80,6 +76,9 @@
     ],
     "culturalHaritages": [
       "Struktur Bangunan: Masjid ini ditopang oleh sembilan tiang kayu yang tersusun konsentris dengan satu tiang utama di tengah. Dindingnya terbuat dari batu kali dan batu bata, sementara atapnya berbentuk limas berundak, awalnya dari ijuk dan kemudian diganti dengan seng pada tahun 1938  "
+    ],
+    "peninggalan": [
+      
     ]
   },
   {
@@ -98,11 +97,8 @@
     "umkm": "Jasa Pemandu Gunung Tujuh",
     "Description": "Danau Gunung Tujuh merupakan danau yang terletak di desa Pelompek, kabupaten Kerinci, Jambi. Danau ini berada di kawasan Gunung Tujuh, sebuah gunung yang berada tepat di belakang Gunung Kerinci. Gunung Tujuh masih termasuk dalam wilayah Taman Nasional Kerinci Seblat yang merupakan Situs Warisan Dunia UNESCO.",
     "History": "Danau Gunung Tujuh juga merupakan salah satu Danau tertinggi di Indonesia, bahkan danau tertinggi di Asia Tenggara. Danau ini berada di ketinggian 1.950 meter di atas permukaan laut dan merupakan danau yang berada diketinggian nomor dua di Indonesia setelah 13 Danau-danau kecil yang terdapat di Gunung Talamau Sumatera Barat di ketinggian 2750 m dpl.",
-    "cultural-Image": [
-      "https://kompaspedia.kompas.id/wp-content/uploads/2022/08/Danau-01_20090621_DANAU-KELIMUTU-01-07-resize-817x540.jpg"
-    ],
-    "culturalHaritages": [
-      "Danau Gunung Tujuh terbentuk dari letusan besar gunung api purba jutaan tahun lalu. Kaldera besar hasil letusan itu menjadi danau yang sekarang ada. Ini merupakan peninggalan alam dan geologi yang sangat penting."
+    "peninggalan": [
+      
     ]
   },
   {
@@ -121,8 +117,9 @@
     ],
     "Description": "Wisata Alam Karai menawarkan kesejukan dan kesegaran air yang mengalir. Apalagi Wisata Alam  Karai memiliki air terjun mini dengan ketinggian sekitar 6 meter dan kedalaman sekitar 150 meter. Tentunya air terjun mini ini sangat jernih dan seger jadi mampu menghipnotis pengunjung untuk menyelaminnya.",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   },
   {
     "ID": 6,
@@ -140,11 +137,8 @@
     "umkm": "Nrithik Craft Store",
     "Description": "Bekas taman kerajaan dari abad ke-18 dengan kompleks pemandian bertingkat dan arsitektur yang indah.",
     "History": "Kebun ini dibangun pada zaman Sultan Hamengku Buwono I (HB I) pada tahun 1758-1765/9. Awalnya, taman yang mendapat sebutan \"The Fragrant Garden\" ini memiliki luas lebih dari 10 hektare dengan sekitar 57 bangunan baik berupa gedung, kolam pemandian, jembatan gantung, kanal air, maupun danau buatan beserta pulau buatan dan lorong bawah air.",
-    "cultural-Image": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwykYNoc6H6Y91TGz2JoiQMvj9M6CzNfp9gw&usqp=CAU"
-    ],
-    "culturalHaritages": [
-      "Dibangun antara tahun 1758–1765 oleh Sultan Hamengkubuwono I, kompleks ini berfungsi sebagai tempat rekreasi dan meditasi bagi keluarga kerajaan. Taman Sari juga memiliki fungsi pertahanan dan tempat persembunyian saat darurat."
+    "peninggalan": [
+      
     ]
   },
   {
@@ -167,11 +161,8 @@
     "umkm": "Camping Ground Tebing Karaton",
     "Description": "Tebing Karaton merupakan destinasi wisata terkenal di Bandung yang berada dalam kawasan Taman Hutan Raya (Tahura) Djuanda.  Wisata tebing yang berada di ketinggian 1200 mdpl ini, menawarkan pemandangan  hutan pinus, seperti dikutip dari laman Tahura Bandung. Dari puncak tebing, pengunjung bisa menyaksikan hamparan Kota Bandung.",
     "History": "Tebing Karaton merupakan bagian dari formasi geologis yang terbentuk akibat aktivitas vulkanik Gunung Sunda Purba. Batu-batu besar di tebing ini diyakini sebagai aliran lava basalt yang terbentuk jutaan tahun lalu dan kemudian terangkat oleh aktivitas sesar Lembang yang masih aktif hingga kini.",
-    "cultural-Image": [
-      "https://asset.kompas.com/crops/qdLqFsGGsNI-D92f2KnNKYUrXgM=/0x19:1000x686/1200x800/data/photo/2022/05/24/628bd4c387d45.jpg"
-    ],
-    "culturalHaritages": [
-      "Tebing Keraton merupakan bagian dari formasi geologis yang terbentuk akibat aktivitas vulkanik Gunung Sunda Purba. Batu-batu besar di tebing ini diyakini sebagai aliran lava basalt yang terbentuk jutaan tahun lalu dan kemudian terangkat oleh aktivitas sesar Lembang yang masih aktif hingga kini."
+    "peninggalan": [
+      
     ]
   },
   {
@@ -194,11 +185,8 @@
     "umkm": "Warung sate kelinci bu yem",
     "Description": "Candi Gedongsongo adalah nama sebuah kompleks bangunan candi peninggalan budaya Hindu yang terletak di desa Candi, Kecamatan Bandungan, Kabupaten Semarang, Jawa Tengah, Indonesia tepatnya di lereng Gunung Ungaran. Di kompleks candi ini terdapat sembilan buah candi.",
     "History": "Candi ini ditemukan oleh Thomas Stanford Raffles pada tahun 1804 dan merupakan peninggalan budaya Hindu dari zaman Wangsa Syailendra abad ke-8 (sekitar 701-800 masehi).Candi ini memiliki persamaan dengan kompleks Candi Dieng di Wonosobo. Candi ini terletak pada ketinggian sekitar 1.200 m di atas permukaan laut sehingga suhu udara di sini cukup dingin (berkisar antara 19-27 �C)",
-    "cultural-Image": [
-      "https://asset.kompas.com/crops/PLERYctRVlKlFY-ZkH1JP3TWRBg=/23x0:1003x653/1200x800/data/photo/2021/12/26/61c8581af190b.png"
-    ],
-    "culturalHaritages": [
-      "Arsitektur Hindu Kuno: Candi Gedong Songo mencerminkan gaya arsitektur Hindu dengan struktur batu andesit yang kokoh. Setiap candi memiliki ciri khas tersendiri, dengan relief dan ukiran yang menggambarkan kisah-kisah dalam ajaran Hindu."
+    "peninggalan": [
+      
     ]
   },
   {
@@ -221,8 +209,9 @@
     "umkm": "Penyewaan Kapal Dan Alat snorkeling",
     "Description": "Paisu pok atau Danau Paisu pok adalah danau yang berada di Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan. Danau Paisu pok memeiliki warna yang cukup transparan, sehingga bagian dasar pada danau cukup terlihat dengan jelas.",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   },
   {
     "ID": 10,
@@ -240,8 +229,9 @@
     "umkm": "Warung Air Terjun Piala",
     "Description": "Air Terjun Piala adalah air terjun bertingkat dengan beberapa tingkatannya menyerupai tangga. Letak Air Terjun Piala berada di dalam hutan dengan pohonnya yang cukup rapat, suasana sekitar terasa asri dan sejuk. Kicauan burung khas Sulawesi terdengar di segala penjuru, sebagai pertanda bahwa habitat di kawasan tersebut masih terjaga.Air Terjun Piala memiliki aliran air yang cukup deras yang berasal dari mata air di atas air terjun.Airnya berwarna jernih kehijauan dengan batuan di bawahnya berwarna putih.",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   },
   {
     "ID": 11,
@@ -263,8 +253,9 @@
     "umkm": "Toko Souvenir Appalarang",
     "Description": "Tebing Apparalang dalam Bahasa Konjo terdiri dari dua suku kata yaitu appa dan ralang. Appa memiliki makna ujung dan ralang bermakna curam. Sesuai namanya tebing dikelilingi tebing-tebing yang curam.Spot foto pertama terletak di bagian atas, dari sini pengunjung dapat lebih dekat menikmati pemandangan tebing-tebing dikelilingi pagar kayu serta hutan bakau. Spot foto kedua terletak di bagian bawah, untuk sampai ke tempat ini pengunjung harus melewati anak tangga dengan sudut yang sangat tajam. Ketinggian anak tangga mencapai tujuh meter untuk menuju dermaga kayu.",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   },
   {
     "ID": 12,
@@ -286,11 +277,8 @@
     "umkm": "Kedai Parapiri",
     "Description": "Benteng era kolonial yang dilindungi & berbentuk bintang 5 sudut, dengan meriam dan panorama pesisir.",
     "History": "Benteng Belgica pada awalnya adalah sebuah benteng yang dibangun oleh bangsa Portugis pada abad 16 di Pulau Naira, Maluku. Lama setelah itu, di lokasi benteng Portugis tersebut kemudian dibangun kembali sebuah benteng oleh VOC atas perintah Gubernur Jendral Pieter Both pada tanggal 4 September 1611. Benteng tersebut kemudian diberi nama Fort Belgica, sehingga pada saat itu, terdapat dua buah benteng di Pulau Neira yaitu; Benteng Belgica dan Benteng Nassau. Benteng ini dibangun dengan tujuan untuk menghadapi perlawanan masyarakat Banda yang menentang monopoli perdagangan pala oleh VOC.",
-    "cultural-Image": [
-      "https://asset.kompas.com/crops/P7N1iXPtPkphHPiCUeXTIHGQQxk=/0x0:650x433/1200x800/data/photo/2021/08/27/6128da92606de.jpg"
-    ],
-    "culturalHaritages": [
-      "Arsitektur Berbentuk Pentagon: Benteng ini memiliki pelataran berbentuk pentagon dengan dua lapis dinding dan menara di setiap sudutnya, menjadikannya unik di Indonesia."
+    "peninggalan": [
+      
     ]
   },
   {
@@ -309,8 +297,9 @@
     "umkm": "Hotel Krisna",
     "Description": "Taman Nasional Teluk Cenderawasih (disingkat TNTC) merupakan taman nasional perairan laut terluas di Indonesia, terdiri dari daratan dan pesisir pantai (0,9%), daratan pulau-pulau (3,8%), terumbu karang (5,5%), dan perairan lautan (89,8%).Potensi karang Taman Nasional Teluk Cendrawasih tercatat 150 jenis dari 15 famili, dan tersebar di tepian 18 pulau besar dan kecil.Terdapat goa alam yang merupakan peninggalan zaman purba, sumber air panas yang mengandung belerang tanpa kadar garam di Pulau Misowaar, goa dalam air dengan kedalaman 100 feet di Tanjung Mangguar. Sejumlah peninggalan dari abad 18 masih bisa dijumpai pada beberapa tempat seperti di Wendesi, Wasior, dan Yomber. Umat Kristiani banyak yang berkunjung ke gereja di desa Yende (Pulau Roon), hanya untuk melihat kitab suci terbitan tahun 1898.",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   },
   {
     "ID": 14,
@@ -332,11 +321,8 @@
     "umkm": "Bin Meos Homestay",
     "Description": "Pasir Timbul merupakan hamparan daratan yang hanya muncul ketika air laut sedang berada pada fase surut. Saat itu, di posisi agak ke tengah, akan tampak seolah muncul pulau kecil.  Pasir timbul hanya muncul saat air surut yaitu di jam  06.00 pagi, 11.00 siang, dan 15.00 sore.",
     "History": "-",
-    "cultural-Image": [
-      "https://www.oasisrajaampat.com/wp-content/uploads/2024/08/Keajaiban-Pasir-Timbul-Mansuar-Destinasi-Wisata-Raja-Ampat-Papua.jpg"
-    ],
-    "culturalHaritages": [
-      "Pasir Timbul Mansuar bukan hanya keajaiban visual, tetapi juga merupakan situs warisan geologi yang penting. Endapan pasir lepas yang muncul merupakan hasil penghancuran terumbu karang, yang menunjukkan proses geologi alamiah dan perubahan ekosistem laut di kawasan tersebut. Fenomena ini menjadi bukti terangkatnya dasar laut yang dapat dilihat pada masa kini, menjadikannya sebagai situs warisan geologi yang penting di Raja Ampat"
+    "peninggalan": [
+      
     ]
   },
   {
@@ -359,7 +345,8 @@
     "umkm": "Jasa Penyewaan Alat Diving dan Snorkeling",
     "Description": "Telaga Biru Samares memiliki air yang sangat jernih dengan warna biru yang memukau, sehingga dasar danau terlihat jelas.Telaga ini memiliki kedalaman sekitar 14 meter dengan air payau dan beberapa batang pohon yang tenggelam di dalamnya, erdapat ikan-ikan kecil yang bersembunyi di bawah batu, menjadikan suasana semakin menakjubkan. Tempat ini juga menawarkan pemandangan pantai yang indah karena terletak di kawasan Pantai Utara Biak. Tak jauh dari telaga ini ada pantai samares",
     "History": "-",
-    "cultural-Image": [],
-    "culturalHaritages": []
+    "peninggalan": [
+      
+    ]
   }
 ]

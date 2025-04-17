@@ -16,7 +16,7 @@ gsap.from("section", {
 
 const sectionRecommendations = async (id) => {
   const section = document.createElement('section');
-  section.className = 'mt-12';
+  section.className = 'mt-12 m-12';
 
   const title = document.createElement('h2');
   title.className = 'text-xl md:text-2xl lg:text-4xl font-semibold text-primary mb-6 text-center';
@@ -53,7 +53,7 @@ const cardItem = (data) => {
 
     const card = document.createElement('div');
     card.className =
-        'relative rounded-lg overflow-hidden shadow hover:shadow-lg transition-all text-white min-h-[240px] flex flex-col justify-end';
+        'relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white min-h-[360px] flex flex-col justify-end group';
 
     const imageUrl = images && images.length > 0 ? images[0] : 'https://via.placeholder.com/300';
     card.style.backgroundImage = `url('${imageUrl}')`;
@@ -62,7 +62,7 @@ const cardItem = (data) => {
 
     const overlay = document.createElement('div');
     overlay.className =
-        'bg-gradient-to-t from-black/60 via-black/30 to-transparent h-full w-full p-4 flex flex-col justify-end';
+        'bg-gradient-to-t from-black/80 via-black/50 to-transparent h-full w-full p-5 flex flex-col justify-end transition-all duration-300 group-hover:from-black/90 group-hover:via-black/70';
 
     const h3 = document.createElement('h3');
     h3.className = 'text-lg md:text-xl font-bold leading-tight mb-1';
@@ -78,8 +78,8 @@ const cardItem = (data) => {
 
     const button = document.createElement('button');
     button.className =
-        'bg-primary text-white text-sm font-medium py-1 px-3 rounded hover:bg-primary-dark transition-all';
-    button.textContent = 'Lihat Detail';
+        'bg-blue-600/90 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-lg w-fit hover:cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg';
+    button.textContent = 'Explore Destination';
     button.setAttribute("data-id", data.ID);
 
     // pas diklik, langsung redirect ke detail (dengan query param id)
