@@ -58,6 +58,7 @@ Server frontend development akan berjalan di `http://localhost:5173`.
 
 frontend/
 ├── dist/ # Build output
+
 ├── public/ # Static assets
 ├── src/
 │ ├── components/ # Reusable UI components
