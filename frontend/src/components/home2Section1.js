@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Swal from 'sweetalert2';
 gsap.registerPlugin(ScrollTrigger);
 
 // fungsi untuk membuat section utama di detail destinasi bagian atas

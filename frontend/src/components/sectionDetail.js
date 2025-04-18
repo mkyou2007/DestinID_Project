@@ -249,24 +249,40 @@ const sectionDetail = (data) => {
     `Sejarah ${data.Name}`
   );
 
-  const sejarahFlex = createEl("div", "lg:flex lg:gap-10");
+  // Create flex container for history section with responsive layout
+  const sejarahFlex = createEl(
+    "div", 
+    "flex flex-col lg:flex-row lg:items-start lg:gap-10 mt-6"
+  );
 
-  // Menampilkan gambar sejarah destinasi
+  // Create image container with aspect ratio and loading optimization
   const sejarahImgBox = createEl(
     "div",
-    "w-full h-56 my-3 rounded-xl overflow-hidden lg:w-1/2 lg:h-80"
+    "relative w-full aspect-[16/9] lg:w-1/2 rounded-xl overflow-hidden shadow-lg"
   );
-  const sejarahImg = createEl("img", "w-full h-full object-cover");
-  sejarahImg.src = data.historyImage || "https://picsum.photos/200/300";
-  sejarahImg.alt = data.Name;
-  sejarahImgBox.appendChild(sejarahImg);
 
+  // Create optimized image with lazy loading and error handling
+  const sejarahImg = createEl("img", "w-full h-full object-cover transition duration-300");
+  sejarahImg.loading = "lazy";
+  sejarahImg.src = data.historyImage?.[0] || "https://picsum.photos/800/450?blur=2";
+  sejarahImg.alt = `Historical photo of ${data.Name}`;
+  sejarahImg.onerror = (e) => {
+    e.target.src = "https://picsum.photos/800/450?blur=2";
+  };
+
+  // Add image to container with fade-in animation
+  sejarahImgBox.appendChild(sejarahImg);
+  gsap.from(sejarahImg, {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+
+  // Create history text with proper typography and fallback
   const sejarahText = createEl(
     "p",
-    "text-lg text-paragraf lg:mt-8 font-medium",
-    data.History !== "-"
-      ? data.History
-      : "Sejarah destinasi ini belum tersedia."
+    "text-lg leading-relaxed text-gray-700 mt-6 lg:mt-0 lg:w-1/2",
+    data.History?.trim() || "Historical information for this destination is not yet available."
   );
 
   sejarahFlex.append(sejarahImgBox, sejarahText); // Menambahkan gambar dan teks sejarah ke flex

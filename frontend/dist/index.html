@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DestinID</title>
+    <link rel="icon" href="./assets/logo-BahixN2A.svg" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "forest-green": "#1D3C34",
+              "leaf-green": "#2E5D4B",
+              "sunset-orange": "#FF7A45",
+              "sand-yellow": "#F5DEB3",
+            },
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+              opensans: ["Open Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Add direct link to Tailwind CSS -->
+    <!-- <link rel="stylesheet" href="./src/tailwind-output.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,9 +43,9 @@
     <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Updated Google Maps API script -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDucZ4rnn48TwdZJ3GlGUiOiwUkCgLhgdg&callback=initMap"
-      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDucZ4rnn48TwdZJ3GlGUiOiwUkCgLhgdg&callback=initMap&loading=async"
       defer
     ></script>
 
@@ -200,8 +223,8 @@
         }
       }
     </style>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="module" crossorigin src="./assets/main-Db_w9ElF.js"></script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script type="module" crossorigin src="./assets/main-DuNT7aXE.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-CwgPdEP7.js">
     <link rel="stylesheet" crossorigin href="./assets/main-DQ80UE6j.css">
   </head>
@@ -216,7 +239,10 @@
           <div class="flex justify-between items-center py-4">
             <!-- Logo -->
             <div class="flex items-center font-manrope">
-              <div class="text-2xl font-bold flex items-center">
+              <div
+                class="text-2xl font-bold flex items-center cursor-pointer"
+                id="site-logo"
+              >
                 <span class="text-forest-green">DESTIN</span>
                 <span class="text-sunset-orange">ID</span>
                 <span class="text-xs text-gray-500 ml-2 hidden md:inline"
@@ -231,23 +257,22 @@
                 <a
                   href="#home"
                   class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  id="nav-home"
                   >Beranda</a
                 >
                 <a
                   href="#destinations"
                   class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  id="nav-destinations"
                   >Destinasi</a
                 >
                 <a
                   href="#about"
                   class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  id="nav-about"
                   >Tentang</a
                 >
-                <a
-                  href="#contact"
-                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
-                  >Kontak</a
-                >
+                
               </div>
             </div>
 
@@ -274,16 +299,20 @@
         class="md:hidden mobile-menu-content w-full"
       >
         <div class="px-4 pt-1 pb-2 space-y-3">
-          <a href="#home" class="menu-item">
+          <a href="#home" class="menu-item" id="mobile-nav-home">
             <span>Beranda</span>
           </a>
-          <a href="#destinations" class="menu-item">
+          <a
+            href="#destinations"
+            class="menu-item"
+            id="mobile-nav-destinations"
+          >
             <span>Destinasi</span>
           </a>
-          <a href="#about" class="menu-item">
+          <a href="#about" class="menu-item" id="mobile-nav-about">
             <span>Tentang</span>
           </a>
-          <a href="" class="menu-item">
+          <a href="#contact" class="menu-item" id="mobile-nav-contact">
             <span>Kontak</span>
           </a>
         </div>
@@ -417,13 +446,59 @@
     <!-- end footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script>
-      
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenuContent = document.getElementById(
           "mobile-menu-content"
         );
         const menuIcon = document.getElementById("menu-icon");
+
+        // Navigation handling based on current page
+        function setupNavigation() {
+          // Check if we're on a detail page (not homepage)
+          const isDetailPage =
+            window.location.pathname.includes("/detail") ||
+            window.location.search.includes("id=");
+
+          const homepageUrl = "/"; // Base URL for your site
+
+          // Function to update nav links
+          const updateNavLink = (linkId, sectionId) => {
+            const link = document.getElementById(linkId);
+            if (link) {
+              // If on detail page, link back to homepage with section hash
+              if (isDetailPage) {
+                link.href = homepageUrl + sectionId;
+              } else {
+                // On homepage, just link to the section
+                link.href = sectionId;
+              }
+            }
+          };
+
+          // Update desktop navigation links
+          updateNavLink("nav-home", "#home");
+          updateNavLink("nav-destinations", "#destinations");
+          updateNavLink("nav-about", "#about");
+          updateNavLink("nav-contact", "#contact");
+
+          // Update mobile navigation links
+          updateNavLink("mobile-nav-home", "#home");
+          updateNavLink("mobile-nav-destinations", "#destinations");
+          updateNavLink("mobile-nav-about", "#about");
+          updateNavLink("mobile-nav-contact", "#contact");
+        }
+
+        // Run navigation setup
+        setupNavigation();
+
+        // Make logo clickable to return to homepage
+        const siteLogo = document.getElementById("site-logo");
+        if (siteLogo) {
+          siteLogo.addEventListener("click", function () {
+            window.location.href = "/";
+          });
+        }
 
         mobileMenuButton.addEventListener("click", function () {
           mobileMenuContent.classList.toggle("open");
@@ -485,9 +560,6 @@
         });
       });
 
-     
-
-   
       const navLinks = document.querySelectorAll(".nav-link");
       navLinks.forEach((link) => {
         link.addEventListener("mouseenter", () => {

@@ -22,10 +22,69 @@ const createEl = (tag, className = "", text = "") => {
   return el;
 };
 
-const url = "http://localhost:9000/destinasi";
+// API configuration with fallback data
+const apiConfig = {
+  url: "http://localhost:9000/destinasi",
+  // Fallback data to use when API is unavailable
+  fallbackData: [
+    {
+      ID: 1,
+      Name: "Masjid Raya Labui",
+      Province: "Aceh",
+      Regency: "Pidie",
+      Category: "Religious",
+      Price: 0,
+      Rating: 4.8,
+      images: [
+        "https://assets.kompasiana.com/items/album/2021/04/30/rappler-608c18bfd541df686e1cbf95.jpeg"
+      ],
+      Description: "Masjid Po Teumeureuhom atau Masjid Labui adalah sebuah masjid yang terletak di Kabupaten Pidie, Aceh."
+    },
+    {
+      ID: 2,
+      Name: "Danau Aek Natonang",
+      Province: "North Sumatra",
+      Regency: "Samosir",
+      Category: "Nature",
+      Price: 10000,
+      Rating: 4.8,
+      images: [
+        "https://asset-2.tstatic.net/tribunnews/foto/bank/images/danau-aek-natonang-1.jpg"
+      ],
+      Description: "Aek Natonang adalah danau di atas Pulau Samosir yang terletak di Danau Toba, sehingga dijuluki danau di atas danau."
+    },
+    {
+      ID: 3,
+      Name: "Masjid Tuo Pincuran Gadang",
+      Province: "West Sumatera",
+      Regency: "Agam",
+      Category: "Religious",
+      Price: 0,
+      Rating: 4.8,
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfSPyZQ-GJxQJi7QnR4cBXsCUiNpoynkxY5qmFPMA3A7hlT_O3x74mAodH_Dp8mjt-HSU&amp;usqp=CAU"
+      ],
+      Description: "Masjid Pincuran Gadang adalah masjid yang berada di sebuah lembah bernama Pincuran Gadang di Kecamatan Matua, Kabupaten Agam, Sumatera Barat."
+    },
+    {
+      ID: 4,
+      Name: "Candi Gedongsongo",
+      Province: "Central Java",
+      Regency: "Semarang",
+      Category: "History",
+      Price: 15000,
+      Rating: 4.6,
+      images: [
+        "https://asset.kompas.com/crops/PLERYctRVlKlFY-ZkH1JP3TWRBg=/23x0:1003x653/1200x800/data/photo/2021/12/26/61c8581af190b.png"
+      ],
+      Description: "Candi Gedongsongo adalah nama sebuah kompleks bangunan candi peninggalan budaya Hindu di lereng Gunung Ungaran."
+    }
+  ]
+};
 
 const section2 = async () => {
   const section = createEl("section", "py-16");
+  section.id = "destinations"; // Add ID for navigation
   const container = createEl("div", "max-w-6xl mx-auto px-4");
 
   container.append(headerContent());
@@ -53,10 +112,38 @@ const section2 = async () => {
     "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
   );
 
-  // Ambil data dari backend
-  const res = await fetch(url);
-  const json = await res.json();
-  const allData = json.data.destinasi;
+  // Ambil data dari backend dengan fallback ke data lokal jika server tidak tersedia
+  let allData = [];
+  try {
+    const res = await fetch(apiConfig.url, { timeout: 3000 });
+    const json = await res.json();
+    allData = json.data.destinasi;
+  } catch (error) {
+    console.warn("Failed to fetch from API, using fallback data", error);
+    allData = apiConfig.fallbackData;
+    
+    // Show a non-blocking notification that we're using fallback data
+    const notification = createEl(
+      "div", 
+      "fixed top-4 right-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded shadow-md max-w-md z-50 animate-fadeIn"
+    );
+    notification.innerHTML = `
+      <div class="flex">
+        <div class="py-1"><svg class="fill-current h-6 w-6 text-yellow-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 10.32 10.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+        <div>
+          <p class="font-bold">Info</p>
+          <p class="text-sm">Menggunakan data lokal karena server tidak tersedia.</p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(notification);
+    
+    // Remove notification after 5 seconds
+    setTimeout(() => {
+      notification.classList.add('animate-fadeOut');
+      setTimeout(() => notification.remove(), 500);
+    }, 5000);
+  }
 
   let filteredData = allData; // Data yang difilter
   let visibleCount = 3; // Jumlah card yang ditampilkan
