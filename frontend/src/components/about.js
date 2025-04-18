@@ -24,7 +24,7 @@ const sectionAbout = () => {
   // Main Image
   const imageContainer = createEl("div", "w-full lg:w-2/5");
   const image = createEl("img", "w-full h-auto rounded-lg shadow-lg");
-  image.src = "./public/assets/ii.svg";
+  image.src = "./assets/ii.svg";
   image.alt = "Indonesian Mountain Landscape";
   imageContainer.appendChild(image);
   flexContainer.appendChild(imageContainer);
