@@ -284,6 +284,12 @@
                   >Destinasi</a
                 >
                 <a
+                  href="?page=culture"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  id="nav-culture"
+                  >Budaya</a
+                >
+                <a
                   href="#about"
                   class="text-gray-700 hover:text-forest-green nav-link font-semibold"
                   id="nav-about"
@@ -325,6 +331,13 @@
             id="mobile-nav-destinations"
           >
             <span>Destinasi</span>
+          </a>
+          <a
+            href="?page=culture"
+            class="menu-item"
+            id="mobile-nav-culture"
+          >
+            <span>Budaya</span>
           </a>
           <a href="#about" class="menu-item" id="mobile-nav-about">
             <span>Tentang</span>
@@ -494,12 +507,14 @@
           // Update desktop navigation links
           updateNavLink("nav-home", "#home");
           updateNavLink("nav-destinations", "#destinations");
+          updateNavLink("nav-culture", "?page=culture");
           updateNavLink("nav-about", "#about");
           updateNavLink("nav-contact", "#contact");
 
           // Update mobile navigation links
           updateNavLink("mobile-nav-home", "#home");
           updateNavLink("mobile-nav-destinations", "#destinations");
+          updateNavLink("mobile-nav-culture", "?page=culture");
           updateNavLink("mobile-nav-about", "#about");
           updateNavLink("mobile-nav-contact", "#contact");
         }

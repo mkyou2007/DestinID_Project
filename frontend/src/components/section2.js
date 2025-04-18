@@ -119,7 +119,7 @@ const section2 = async () => {
     const json = await res.json();
     allData = json.data.destinasi;
   } catch (error) {
-    console.warn("Failed to fetch from API, using fallback data", error);
+    
     allData = apiConfig.fallbackData;
     
     // Show a non-blocking notification that we're using fallback data
