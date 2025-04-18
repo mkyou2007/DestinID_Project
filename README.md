@@ -52,50 +52,14 @@ npm run preview
 
 Server frontend development akan berjalan di `http://localhost:5173`.
 
-## Struktur Folder
-
-### Frontend
-
-frontend/
-
-├── dist/ # Build output
-├── public/ # Static assets
-├── src/
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Page components
-│ ├── services/ # API services
-│ ├── utils/ # Helper functions
-│ ├── main.js # Entry point
-│ └── input.css # TailwindCSS input file
-├── index.html # Main HTML template
-├── panorama.html # Panorama view template
-├── package.json # Dependencies and scripts
-└── vite.config.js # Vite configuration
-
-### Backend
-
-backend/
-├── src/
-│ ├── controllers/ # Request handlers
-│ ├── data/ # Data files
-│ ├── routes/ # API routes
-│ ├── services/ # Business logic
-│ ├── utils/ # Helper functions
-│ └── server.js # Entry point
-└── package.json # Dependencies and scripts
-
-### Machine Learning
-
-machine-learning/
-└── Underrated_Destinations.csv # Dataset untuk rekomendasi destinasi
-
-
 ## Fitur Utama
 
 1. **Halaman Utama**: Menampilkan berbagai destinasi wisata dengan animasi UI menggunakan GSAP
 2. **Halaman Detail Destinasi**: Informasi lengkap tentang destinasi tertentu
 3. **Panorama Interaktif**: Tampilan 360° dari lokasi destinasi menggunakan Pannellum
 4. **Rekomendasi Destinasi**: Algoritma rekomendasi tempat wisata berdasarkan preferensi
+
+
 
 ## Pengembangan
 
