@@ -1,17 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./**/*.html",  // All HTML files in any subdirectory
-    "./src/**/*.js",  // All JS files in src or subdirectories
-    "./src/**/*.{jsx,tsx}",  // React files if any
-    "./public/**/*.js",  // JS in public folder
-    "./pages/**/*.js"  // In case of pages directory
-  ],
-  safelist: [
-    {
-      pattern: /.*/,  // Include ALL possible Tailwind classes
-      variants: ['sm', 'md', 'lg', 'xl', '2xl', 'hover', 'focus', 'active'],
-    },
+    "./index.html",
+    "./src/index.html",
+    "./public/index.html",
+    "./src/**/*.{js,jsx,ts,tsx,vue}",
+    "./src/**/*.html",
+    "./src/**/*.css",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/utils/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
@@ -20,6 +18,9 @@ export default {
         "leaf-green": "#2E5D4B",
         "sunset-orange": "#FF7A45",
         "sand-yellow": "#F5DEB3",
+        "primary": "#1D3C34",
+        "second": "#2E5D4B",
+        "paragraf": "#4B5563",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],

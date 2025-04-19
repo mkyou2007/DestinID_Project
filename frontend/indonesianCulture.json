@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "province": "Aceh",
+    "region": "Sumatera",
+    "title": "Saman Dance",
+    "description": "Tarian komunal cepat dengan koordinasi tepukan tangan, punggung, dan dada.",
+    "image": "https://i.pinimg.com/1200x/fc/85/0b/fc850b9392689fedd1becc3c65980df4.jpg",
+    "details": "Saman Dance: Tarian komunal cepat yang melibatkan koordinasi tepukan tangan, punggung, dan dada dengan lagu Islami. Menekankan kekompakan dan disiplin."
+  },
+  {
+    "id": 2,
+    "province": "Sumatera Utara",
+    "region": "Sumatera",
+    "title": "Tari Tor-Tor",
+    "description": "Tarian Batak yang diiringi gondang (gendang) dengan gerakan lugas.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Tari_Tor-tor.jpg",
+    "details": "Tari Tor-Tor: Tarian Batak yang diiringi gondang (gendang). Gerakannya lugas, dipakai untuk acara adat seperti pernikahan dan upacara kematian."
+  },
+  {
+    "id": 3,
+    "province": "Sumatera Barat",
+    "region": "Sumatera",
+    "title": "Adat Perkawinan Minangkabau",
+    "description": "Upacara perkawinan dengan tradisi 'Merarik' dan rumah gadang beratap gonjong.",
+    "image": "https://asset.kompas.com/crops/jAT1mDmxALc6pTEg19zI1ORvNO0=/0x0:1000x667/750x500/data/photo/2022/04/27/6268e4272fd1d.jpg",
+    "details": "Adat Perkawinan Minangkabau: Dikenal dengan 'Merarik' (menjemput mempelai) dan 'Berbalas Pantun'. Rumah Gadang dengan atap gonjong jadi ciri khas arsitektur."
+  },
+  {
+    "id": 4,
+    "province": "Riau",
+    "region": "Sumatera",
+    "title": "Tari Zapin",
+    "description": "Tarian Melayu dengan pengaruh Timur Tengah dan gerakan elegan.",
+    "image": "https://nilawarni.files.wordpress.com/2012/04/zapin.jpg",
+    "details": "Tari Zapin: Tarian Melayu yang dipengaruhi budaya Timur Tengah, gerakannya elegan, diiringi gambus dan marawis."
+  },
+  {
+    "id": 5,
+    "province": "Jambi",
+    "region": "Sumatera",
+    "title": "Upacara Sakai",
+    "description": "Ritual 'Memarik Kude' sebagai ungkapan syukur atas panen.",
+    "image": "https://asset.kompas.com/crops/iNmG1eeGz21l5Yqa_Ij9QANXEjQ=/0x0:1000x667/750x500/data/photo/2021/08/24/61244e57e4df5.jpg",
+    "details": "Upacara Sakai: Masyarakat Melayu Jambi mengenal ritual 'Memarik Kude' (menarik kuda) sebagai ungkapan rasa syukur atas panen."
+  },
+  {
+    "id": 6,
+    "province": "Sumatera Selatan",
+    "region": "Sumatera",
+    "title": "Tari Gending Sriwijaya",
+    "description": "Tarian kemegahan Kerajaan Sriwijaya dengan kostum songket emas.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/TGS1.jpg",
+    "details": "Tari Gending Sriwijaya: Menggambarkan kemegahan Kerajaan Sriwijaya; penari mengenakan songket emas dan mahkota khas."
+  },
+  {
+    "id": 7,
+    "province": "Bengkulu",
+    "region": "Sumatera",
+    "title": "Tari Sekapur Sirih",
+    "description": "Tarian penyambutan tamu kehormatan dengan sirih sebagai simbol salam.",
+    "image": "https://cdn.antaranews.com/cache/1200x800/2023/10/20/Screenshot-2023-10-20-at-22.55.55.png",
+    "details": "Tari Sekapur Sirih: Tarian penyambutan tamu kehormatan, penari membawa sirih sebagai simbol salam."
+  },
+  {
+    "id": 8,
+    "province": "Lampung",
+    "region": "Sumatera",
+    "title": "Panjang Jiwo Sasak Sembilan",
+    "description": "Rumah adat tinggi bertiang sembilan dengan filosofi adat Lampung.",
+    "image": "https://asset.kompas.com/crops/xtpNmW1Vdnx-ZHvCcUjzORz_wfA=/13x0:701x459/750x500/data/photo/2020/02/14/5e466e1f88a71.jpg",
+    "details": "Panjang Jiwo Sasak Sembilan: Rumah adat tinggi bertiang sembilan, mencerminkan filosofi adat Lampung."
+  },
+  {
+    "id": 9,
+    "province": "Bangka Belitung",
+    "region": "Sumatera",
+    "title": "Tarian Belah Paddle",
+    "description": "Tarian budaya nelayan dengan gerakan dayung dan simbol kehidupan pesisir.",
+    "image": "https://asset.kompas.com/crops/GVrK4-rKIzL_j11aq5TkPcQYMGY=/41x0:737x464/750x500/data/photo/2020/07/25/5f1be3ed8fb8e.jpg",
+    "details": "Tarian Belah Paddle: Tarian budaya nelayan, menampilkan gerakan dayung dan semburan air sebagai simbol kehidupan pesisir."
+  },
+  {
+    "id": 10,
+    "province": "Kepulauan Riau",
+    "region": "Sumatera",
+    "title": "Tari Topeng",
+    "description": "Tarian dengan topeng kayu warna-warni yang menampilkan kisah pewayangan Melayu.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Topeng_Betawi.jpg",
+    "details": "Tari Topeng: Tarian dengan topeng kayu berwarna-warni, menampilkan kisah pewayangan lokal dengan aroma Melayu."
+  },
+  {
+    "id": 11,
+    "province": "Banten",
+    "region": "Jawa",
+    "title": "Seba Baduy",
+    "description": "Ritual masyarakat Baduy menghormati Sultan Banten dengan prosesi hening.",
+    "image": "https://asset.kompas.com/crops/8o55HVg8PnF5AfgIWi7Y0oN5pPk=/10x33:990x687/750x500/data/photo/2019/05/27/2413278015.jpg",
+    "details": "Seba Baduy: Ritual masyarakat Baduy dalam menghormati Sultan Banten, melibatkan prosesi hening dan persembahan."
+  },
+  {
+    "id": 12,
+    "province": "DKI Jakarta",
+    "region": "Jawa",
+    "title": "Ondel-ondel",
+    "description": "Boneka raksasa berwarna cerah untuk mengusir roh jahat dan meramaikan hajatan.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Ondel-ondel_with_batik_mask.jpg",
+    "details": "Ondel-ondel: Boneka raksasa berwarna cerah yang diarak di jalan untuk mengusir roh jahat dan meramaikan hajatan."
+  },
+  {
+    "id": 13,
+    "province": "Jawa Barat",
+    "region": "Jawa",
+    "title": "Angklung",
+    "description": "Alat musik bambu yang dimainkan secara ansambel, warisan budaya UNESCO.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Angklung.jpg",
+    "details": "Angklung: Alat musik bambu yang dimainkan secara ansambel; UNESCO menetapkannya sebagai Warisan Budaya Takbenda."
+  },
+  {
+    "id": 14,
+    "province": "Jawa Tengah",
+    "region": "Jawa",
+    "title": "Wayang Kulit",
+    "description": "Pertunjukan bayangan kulit klasik dengan kisah Ramayana dan Mahabharata.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Wayang_Kulit_in_Yogyakarta.jpg",
+    "details": "Wayang Kulit: Pertunjukan bayangan kulit klasik, mengisahkan epos Ramayana dan Mahabharata, dipandu dalang."
+  },
+  {
+    "id": 15,
+    "province": "DI Yogyakarta",
+    "region": "Jawa",
+    "title": "Batik Yogya",
+    "description": "Motif parang, kawung, dan ceplok dengan simbolisme keraton.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Batik_Yogyakarta.jpg",
+    "details": "Batik Yogya: Motif parang, kawung, dan ceplok yang sarat simbolisme keraton; pembuatan masih banyak dikerjakan di Trusmi."
+  },
+  {
+    "id": 16,
+    "province": "Jawa Timur",
+    "region": "Jawa",
+    "title": "Reog Ponorogo",
+    "description": "Pertunjukan tari topeng singa raksasa dengan iringan gamelan dan jathilan.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Reog_Solo.jpg",
+    "details": "Reog Ponorogo: Pertunjukan tari topeng singa raksasa 'Barongan' dengan iringan gamelan dan jathilan (penunggang kuda)."
+  },
+  {
+    "id": 17,
+    "province": "Bali",
+    "region": "Bali & Nusa Tenggara",
+    "title": "Upacara Ngaben",
+    "description": "Prosesi kremasi untuk pelepasan roh dengan ogoh-ogoh dan gamelan.",
+    "image": "https://asset.kompas.com/crops/KxYZbIrXJ1i-6nvjS9iWJCDe2V8=/0x0:780x520/750x500/data/photo/2019/10/02/5d94a6e02ac15.jpeg",
+    "details": "Upacara Ngaben: Prosesi kremasi massal/individu untuk pelepasan roh, melibatkan ogoh-ogoh dan tabuh ragam gamelan."
+  },
+  {
+    "id": 18,
+    "province": "Nusa Tenggara Barat",
+    "region": "Bali & Nusa Tenggara",
+    "title": "Tari Gandrung",
+    "description": "Tarian ungkapan terima kasih atas hasil panen dengan aksesoris warna-warni.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Gandrung_Dancer.jpg",
+    "details": "Tari Gandrung: Tarian ungkapan terima kasih warga Banyuwangi/NTB atas hasil panen, penari didandani penuh aksesoris warna-warni."
+  },
+  {
+    "id": 19,
+    "province": "Nusa Tenggara Timur",
+    "region": "Bali & Nusa Tenggara",
+    "title": "Tenun Ikat",
+    "description": "Kain tenun tangan dengan motif fauna dan leluhur untuk upacara adat.",
+    "image": "https://asset.kompas.com/crops/dTD7CFgZ7JnHK9CU0h7E6t26LLk=/0x0:1000x667/750x500/data/photo/2020/05/19/5ec3c21d2bd33.jpg",
+    "details": "Tenun Ikat: Kain tenun tangan dengan motif fauna dan leluhur, dipakai dalam upacara adat dan penuh makna simbolik."
+  },
+  {
+    "id": 20,
+    "province": "Kalimantan Barat",
+    "region": "Kalimantan",
+    "title": "Tari Enggang",
+    "description": "Tarian Dayak Kenyah meniru gerak burung enggang pada acara adat.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Tari_enggang.jpg",
+    "details": "Tari Enggang: Tarian Dayak Kenyah meniru gerak burung enggang, dipentaskan pada acara adat."
+  },
+  {
+    "id": 21,
+    "province": "Kalimantan Tengah",
+    "region": "Kalimantan",
+    "title": "Seni Ukir Dayak",
+    "description": "Motif flora-fauna pada perisai, mandau, dan hiasan rumah panjang.",
+    "image": "https://asset.kompas.com/crops/58-MUa5vRQrwgcZjAVK5Qz2Ys3U=/16x0:716x467/750x500/data/photo/2020/11/11/5fabbd3f4e9e4.jpg",
+    "details": "Seni Ukir Dayak: Motif flora-fauna pada perisai, mandau (pedang) dan hiasan rumah panjang."
+  },
+  {
+    "id": 22,
+    "province": "Kalimantan Selatan",
+    "region": "Kalimantan",
+    "title": "Tari Baksa Kembang",
+    "description": "Tarian Banjar gadis-gadis memetik bunga sebagai lambang keanggunan.",
+    "image": "https://upload.wikimedia.org/wikipedia/id/7/7c/Tari_Baksa_Kembang.jpg",
+    "details": "Tari Baksa Kembang: Tarian Banjar gadis-gadis memetik bunga, melambangkan keanggunan."
+  },
+  {
+    "id": 23,
+    "province": "Kalimantan Timur",
+    "region": "Kalimantan",
+    "title": "Upacara Tetabuhan",
+    "description": "Ritual Tolak Bala masyarakat Dayak Gunung dengan musik gong dan tetabuhan.",
+    "image": "https://asset.kompas.com/crops/dffZxCMAW53CzYyKZUk0VXzm4mI=/0x0:1000x667/750x500/data/photo/2022/05/08/62778dc373f0d.jpg",
+    "details": "Upacara Tetabuhan: Ritual Tolak Bala masyarakat Dayak Gunung, dengan musik gong dan tetabuhan."
+  },
+  {
+    "id": 24,
+    "province": "Kalimantan Utara",
+    "region": "Kalimantan",
+    "title": "Tari Lumintu",
+    "description": "Tarian penyambutan tamu dengan gerak gemulai dan kostum warna-warni.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Dayak-Women-Dancer-by-Chong.jpg",
+    "details": "Tari Lumintu: Tarian penyambutan tamu, dengan gerak gemulai dan kostum warna-warni khas kaum Dayak."
+  },
+  {
+    "id": 25,
+    "province": "Sulawesi Utara",
+    "region": "Sulawesi",
+    "title": "Tradisi Maengket",
+    "description": "Pesta panen padi Minahasa dengan tarian dan musik tradisional.",
+    "image": "https://www.indonesiakaya.com/uploads/_images_gallery/1__Tari_Maengket_dipentaskan_dalam_Festival_Pesona_Bunaken_2018.jpg",
+    "details": "Tradisi Maengket: Masyarakat Minahasa mengadakan pesta panen padi dengan tarian dan musik tradisional."
+  },
+  {
+    "id": 26,
+    "province": "Gorontalo",
+    "region": "Sulawesi",
+    "title": "Tari Polopalo",
+    "description": "Tarian gembira saat panen dengan penari mengenakan keranjang berisi padi.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Tari_Gorontalo.jpg",
+    "details": "Tari Polopalo: Tarian gembira saat panen, penari mengenakan keranjang berisi padi."
+  },
+  {
+    "id": 27,
+    "province": "Sulawesi Tengah",
+    "region": "Sulawesi",
+    "title": "Upacara Adat Kaili",
+    "description": "Ritual 'Potong Bubur' sebagai wujud syukur petani atas hasil panen.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Balia.jpg",
+    "details": "Upacara Adat Kaili: Ritual 'Potong Bubur' sebagai wujud syukur petani."
+  },
+  {
+    "id": 28,
+    "province": "Sulawesi Selatan",
+    "region": "Sulawesi",
+    "title": "Pa'budaya Bugis",
+    "description": "Seni ukir kapal pinisi, tenun sutra, dan upacara adat siri' na pacce.",
+    "image": "https://asset.kompas.com/crops/SjX2ZhSXk51x15Fqq-KA0_DZX-0=/0x0:872x581/750x500/data/photo/2021/08/05/610bca57ab10f.jpg",
+    "details": "Pa'budaya Bugis: Seni ukir kapal pinisi, tenun sutra, dan upacara adat siri' na pacce (kehormatan dan harga diri)."
+  },
+  {
+    "id": 29,
+    "province": "Sulawesi Tenggara",
+    "region": "Sulawesi",
+    "title": "Tari Cakalele",
+    "description": "Tarian perang Buton dengan parang kecil dan gerakan tegas.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Tari_Cakalele.jpg",
+    "details": "Tari Cakalele: Tarian perang Buton, penari membawa parang kecil, gerakannya tegas."
+  },
+  {
+    "id": 30,
+    "province": "Sulawesi Barat",
+    "region": "Sulawesi",
+    "title": "Tari Lulo",
+    "description": "Tarian sambutan dari Mandar dengan daun lontar sebagai simbol persahabatan.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Tari_lulo.jpg",
+    "details": "Tari Lulo: Tarian sambutan dari Mandar, melambangkan persahabatan dengan membawa daun lontar."
+  },
+  {
+    "id": 31,
+    "province": "Maluku",
+    "region": "Maluku & Papua",
+    "title": "Tari Cakalele Maluku",
+    "description": "Tarian perang dengan warangka bidar (perisai) dan tombak.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Tari_Cakalele_Maluku.jpg",
+    "details": "Tari Cakalele Maluku: Mirip Sultra, tetapi memakai warangka bidar (perisai) dan tombak."
+  },
+  {
+    "id": 32,
+    "province": "Maluku Utara",
+    "region": "Maluku & Papua",
+    "title": "Seni Musik Tifa",
+    "description": "Gendang tradisional dengan tarian dan lagu-lagu Islami.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Tifa_Maluku.jpg",
+    "details": "Seni Musik Tifa: Gendang tradisional dipadukan tarian dan lagu-lagu Islami."
+  },
+  {
+    "id": 33,
+    "province": "Papua",
+    "region": "Maluku & Papua",
+    "title": "Yospan (Yosim Pancar)",
+    "description": "Tarian gabungan yospan dan hullahula dengan gerakan enerjik dan koteka.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Tari_Yospan.jpg",
+    "details": "Yospan (Yosim Pancar): Gabungan tari yospan (Yosim) hullahula panagesan. Gerakannya enerjik, memakai koteka dan koteka disertai cawat tradisional."
+  },
+  {
+    "id": 34,
+    "province": "Papua Barat",
+    "region": "Maluku & Papua",
+    "title": "Tari War Dance (Lenso)",
+    "description": "Tarian perang suku Arfak dengan pakaian bulu burung dan perisai kayu.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/War_Dance_Papua.jpg",
+    "details": "Tari War Dance (Lenso): Tarian perang ala suku Arfak, dengan pakaian bulu burung dan perisai kayu."
+  }
+] 

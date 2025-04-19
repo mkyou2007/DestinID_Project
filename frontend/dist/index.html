@@ -243,9 +243,9 @@
       }
     </style>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script type="module" crossorigin src="./assets/main-wBSay459.js"></script>
+    <script type="module" crossorigin src="./assets/main-vkRkiOwK.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/vendor-CwgPdEP7.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-DQ80UE6j.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-B9wnZook.css">
   </head>
 
   <body
@@ -284,6 +284,12 @@
                   class="text-gray-700 hover:text-forest-green nav-link font-semibold"
                   id="nav-destinations"
                   >Destinasi</a
+                >
+                <a
+                  href="?page=culture"
+                  class="text-gray-700 hover:text-forest-green nav-link font-semibold"
+                  id="nav-culture"
+                  >Budaya</a
                 >
                 <a
                   href="#about"
@@ -328,12 +334,17 @@
           >
             <span>Destinasi</span>
           </a>
+          <a
+            href="?page=culture"
+            class="menu-item"
+            id="mobile-nav-culture"
+          >
+            <span>Budaya</span>
+          </a>
           <a href="#about" class="menu-item" id="mobile-nav-about">
             <span>Tentang</span>
           </a>
-          <a href="#contact" class="menu-item" id="mobile-nav-contact">
-            <span>Kontak</span>
-          </a>
+          
         </div>
       </div>
     </header>
@@ -498,12 +509,14 @@
           // Update desktop navigation links
           updateNavLink("nav-home", "#home");
           updateNavLink("nav-destinations", "#destinations");
+          updateNavLink("nav-culture", "?page=culture");
           updateNavLink("nav-about", "#about");
           updateNavLink("nav-contact", "#contact");
 
           // Update mobile navigation links
           updateNavLink("mobile-nav-home", "#home");
           updateNavLink("mobile-nav-destinations", "#destinations");
+          updateNavLink("mobile-nav-culture", "?page=culture");
           updateNavLink("mobile-nav-about", "#about");
           updateNavLink("mobile-nav-contact", "#contact");
         }
